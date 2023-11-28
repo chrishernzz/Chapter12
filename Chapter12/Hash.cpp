@@ -50,22 +50,9 @@ void Hash::initializeVector(){
 	Student student;
 	Student placeHolder;
 
-	for (int l = 0; l < s.size(); l++)
-	{
-		if (s[l] != placeHolder)
-		{
-			hasEntry = true;
-		}
-	}
-
-	if (hasEntry)
-	{
-		cout << "\n\t\t\tERROR: File has already been read.\n\n";
-		system("pause");
-		return;
-	}
+	s.clear();
+	s.resize(40);
 	read.open("Students.dat");
-
 	if (!read)
 	{
 		cout << "\n\t\t\tERROR: FILE DID NOT OPEN\n\n";
